@@ -1,0 +1,159 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  position: relative;
+}
+
+.subheader {
+  position: absolute;
+  display: block;
+  width: 100%;
+  background-color: #e4e4e4;
+  margin-top: 20px;
+}
+
+nav {
+  /* height: 53px; */
+  background-color: #212121;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.announcement-bar__message {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0;
+  padding: 30px 30px;
+  color: #000;
+}
+.announcement-bar {
+  height: 2.5rem;
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  min-height: 5px;
+  text-decoration: none;
+  background-color: #e4e4e4;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 70px;
+  margin: 0;
+  list-style-type: none;
+}
+.menu .menu_link {
+  /* color: #fff; */
+  font-size: 15px;
+  font-weight: 300;
+  color: white;
+  text-decoration: none;
+}
+.menu .menu_item {
+  border-right: 1px dotted black;
+  padding-right: 10px;
+}
+
+.mobile {
+  min-height: 864px;
+  padding: 48px 0 79px 0;
+  background: url("../img/mobile_bg.png") center center/cover no-repeat;
+}
+.mobile .row {
+  margin-top: 32px;
+}
+.mobile_item {
+  position: relative;
+  width: 320px;
+  height: 280px;
+  margin: 0 auto;
+  margin-bottom: 19px;
+  padding-top: 210px;
+}
+
+.mobile_item_subtitle {
+  color: #fff;
+  font-family: Roboto;
+  /* font-size: 24px; */
+  font-weight: 400;
+  line-height: 31px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.product_link {
+  color: white;
+  text-decoration: none;
+}
+
+.mobile_item_1 {
+  background: url("../img/1.png") center center/cover no-repeat;
+}
+.mobile_item_2 {
+  background: url("../img/2.png") center center/cover no-repeat;
+}
+.mobile_item_3 {
+  background: url("../img/3.png") center center/cover no-repeat;
+}
+.mobile_item_4 {
+  background: url("../img/4.png") center center/cover no-repeat;
+}
+.mobile_item_5 {
+  background: url("../img/5.png") center center/cover no-repeat;
+}
+.mobile_item_6 {
+  background: url("../img/6.png") center center/cover no-repeat;
+}
+.mobile_item_7 {
+  background: url("../img/7.png") center center/cover no-repeat;
+}
+.mobile_item_8 {
+  background: url("../img/8.png") center center/cover no-repeat;
+}
+.mobile_item_9 {
+  background: url("../img/9.png") center center/cover no-repeat;
+}
+.mobile_item_10 {
+  background: url("../img/10.png") center center/cover no-repeat;
+}
+.mobile_item_11 {
+  background: url("../img/11.png") center center/cover no-repeat;
+}
+.mobile_item_12 {
+  background: url("../img/12.png") center center/cover no-repeat;
+}
+.mobile_item_13 {
+  background: url("../img/13.png") center center/cover no-repeat;
+}
+.mobile_item_14 {
+  background: url("../img/14.png") center center/cover no-repeat;
+}
+.mobile_item_15 {
+  background: url("../img/15.png") center center/cover no-repeat;
+}
+.mobile_item_16 {
+  background: url("../img/16.png") center center/cover no-repeat;
+}
+
+.mobile_item_sunglassees {
+  background: url("../img/sunglasses.png") center center/cover no-repeat;
+}
+
+.mobile_item_18 {
+  background: url("../img/18.png") center center/cover no-repeat;
+}
+
+.medium-up--grid--table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin-left: 0;
+  text-align: center;
+}
+
