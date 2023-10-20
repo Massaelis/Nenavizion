@@ -21,8 +21,11 @@ public class JewelryController {
     public String create(@RequestBody Jewelry jewelry) {
         if (jewelry.getName() == null) {
             jewelry.setName("Default name");
+        } else if (jewelry.getPrice() == 0) {
             jewelry.setPrice(000);
+        } else if (jewelry.getType() == null) {
             jewelry.setType("Default type");
+        } else if (jewelry.getColor() == null) {
             jewelry.setColor("Default color");
         }
         return service.save(jewelry);
