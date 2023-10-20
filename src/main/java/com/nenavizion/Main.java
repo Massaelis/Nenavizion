@@ -1,15 +1,18 @@
 package com.nenavizion;
-
 import com.nenavizion.config.FlywayUtil;
-import com.nenavizion.config.HibernateFactoryUtil;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+@EnableJpaRepositories("com.nenavizion.repository")
+@EntityScan("com.nenavizion.model")
+@SpringBootApplication
 public class Main {
+
     public static void main(String[] args) {
-        SessionFactory sessionFactory = HibernateFactoryUtil.getSessionFactory();
         FlywayUtil.initMigration();
-        final Session session = sessionFactory.openSession();
-        session.close();
+
+        SpringApplication.run(Main.class, args);
+
     }
 }
