@@ -16,6 +16,7 @@ header {
 
 nav {
   background-color: #212121;
+
   position: fixed;
   top: 0;
   width: 100%;
@@ -61,9 +62,14 @@ nav {
 
 .mobile {
   min-height: 864px;
-  padding: 48px 0 79px 0;
-  background: url("../img/mobile_bg.png") center center/cover no-repeat;
+  padding: 79px 0 20px 0;
 }
+
+.mobile_i {
+  /* clear: both; */
+  padding: 79px 0 20px 0;
+}
+
 .mobile .row {
   margin-top: 32px;
 }
@@ -72,6 +78,34 @@ nav {
   width: 320px;
   height: 280px;
   margin: 0 auto;
+}
+
+.item {
+  padding: 79px 0 20px 0;
+  /* margin-left: 391px; */
+}
+
+.item_img {
+  width: 420px;
+  height: 380px;
+  float: left;
+  margin-left: 20%;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+.btn {
+  margin-top: 20px;
+  border-radius: 4px;
+  background: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%);
+  box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.12) inset;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  /* background-color: #e4e4e4; */
 }
 
 .item_under {
@@ -85,12 +119,22 @@ nav {
   text-transform: uppercase;
 }
 
+.item_40 {
+  padding-top: 35px;
+  font-size: 15px;
+  font-family: Courier New, Courier, monospace;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
 .item_under_price {
   font-family: Roboto;
   font-weight: 400;
   line-height: 31px;
   text-transform: uppercase;
-  text-align: center;
   margin-bottom: 19px;
 }
 
@@ -98,6 +142,34 @@ nav {
   padding-top: 20px;
   color: white;
   text-decoration: none;
+}
+
+.product_link_2 {
+  font-size: 15px;
+  font-family: Courier New, Courier, monospace;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 40px;
+
+  padding-top: 20px;
+
+  text-decoration: none;
+}
+
+.message {
+  font-size: 15px;
+  font-family: Courier New, Courier, monospace;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 40px;
 }
 
 .mobile_item_1 {
