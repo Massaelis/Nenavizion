@@ -1,33 +1,33 @@
 package com.nenavizion.controller;
 
-import com.nenavizion.model.User;
-import com.nenavizion.service.UserService;
+import com.nenavizion.model.Client;
+import com.nenavizion.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/user")
-public class UserController {
-    private final UserService service;
+@RequestMapping("/client")
+public class ClientController {
+    private final ClientService service;
 
     @Autowired
-    public UserController(final UserService service) {
+    public ClientController(final ClientService service) {
         this.service = service;
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public String create(@RequestBody User user) {
-        return service.save(user);
+    public String create(@RequestBody Client client) {
+        return service.save(client);
     }
 
     @PutMapping
-    public String update(@RequestBody User user) {
-        if (user.getEmail() == null) {
+    public String update(@RequestBody Client client) {
+        if (client.getEmail() == null) {
             throw new IllegalArgumentException();
         }
-        return service.update(user);
+        return service.update(client);
     }
 
     @DeleteMapping("/{email}")

@@ -10,7 +10,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class User {
+public class Client {
     @Id
     private String email;
 
