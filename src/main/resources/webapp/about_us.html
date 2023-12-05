@@ -1,0 +1,135 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Nenevizion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+            rel="stylesheet"
+    />
+    <script
+            src="https://kit.fontawesome.com/b34c11d164.js"
+            crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="about">
+<header>
+    <div th:insert="menu :: menu_fragment"></div>
+
+    <!--    <div class="subheader.html">-->
+    <!--        <div class="container">-->
+    <!--            <div class="announcement-bar">-->
+    <!--                <p class="announcement-bar__message">-->
+    <!--                    "Vse chto ya vizhu, ya nenavizhu"-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <nav>-->
+    <!--        <div class="container">-->
+    <!--            <ul class="menu">-->
+    <!--                <li class="menu_item">-->
+    <!--                    <a href="index.html" class="menu_link">All product</a>-->
+    <!--                </li>-->
+    <!--                <li class="menu_item">-->
+    <!--                    <a href="earrings.html" class="menu_link">Earrings</a>-->
+    <!--                </li>-->
+    <!--                <li class="menu_item">-->
+    <!--                    <a href="necklaces.html" class="menu_link">Neaclace</a>-->
+    <!--                </li>-->
+    <!--                <li class="menu_item">-->
+    <!--                    <a href="sunglasses.html" class="menu_link">Sunglasses</a>-->
+    <!--                </li>-->
+    <!--                <li class="menu_item">-->
+    <!--                    <a href="braclet.html" class="menu_link">Bracelet</a>-->
+    <!--                </li>-->
+    <!--                <li class="menu_item">-->
+    <!--                    <a href="registration.html" class="menu_link"-->
+    <!--                    ><i class="fa-regular fa-user"></i-->
+    <!--                    ></a>-->
+    <!--                </li>-->
+    <!--                <li class="menu_item">-->
+    <!--                    <a href="#" class="menu_link"-->
+    <!--                    ><i class="fa-solid fa-basket-shopping"></i-->
+    <!--                    ></a>-->
+    <!--                </li>-->
+    <!--            </ul>-->
+    <!--        </div>-->
+    <!--    </nav>-->
+</header>
+
+<section class="item">
+    <div class="col-md-10">
+        <div class="text_about_us">
+            about us: <br/><br/>
+            Nenavizion, is a fashion brand, founded in 2021 in Athens, Greece,
+            started by two visionary 20-year-old friends. Originating from the
+            sale of dead stock eyewear from the 2000s. Later on the brand swiftly
+            expanded into adding jewelry (mainly crosses ), as well as shoes and
+            clothing pieces. <br/><br/>The name "nenavizion" is a fusion of a
+            Russian term, "ненавижу" (nenavizhu), translating to "hate," and
+            "Vizion" (with a distinctive "z"), encapsulating a profound meaning.
+            <br/><br/>This brand is more than a label; it embodies a mindset
+            determined to revolutionize Greek fashion and, subsequently, make a
+            global impact. Nenavizion thrives on collaboration, embracing the
+            synergy of like-minded young artists who share our vision. So, if you
+            would like to be part of the team feel free to contact us ;<br/><br/>
+            Embarking on this venture with a budget of 30 euros and no prior
+            industry knowledge. We relied on pure vision and an unwavering love
+            for the youth and fashion community.<br/><br/>
+            To those who harbor a vision. Trust your instincts. Nurture your
+            curiosity. And let inspiration guide you. Unleash your creativity and
+            express love unabashedly.
+        </div>
+        <div class="item_about_us">
+            <br/><br/>
+            Contact information : <br/><br/>
+
+            email :
+            <a href="mailto:nenavizion@gmail.com" class="about_us_link"
+            >nenavizion@gmail.com</a
+            >
+            <br/><br/>
+            Social Media : <br/><br/>
+            Instagram:
+            <a
+                    href="https://instagram.com/nenavizion?igshid=OGQ5ZDc2ODk2ZA=="
+                    class="about_us_link"
+            >@nenavizion</a
+            >
+            <br/><br/>
+            Tiktok:
+            <a
+                    href="https://www.tiktok.com/@nenavizion?_t=8hNdJBF3rN3&_r=1"
+                    class="about_us_link"
+            >@nenavizion</a
+            >
+        </div>
+    </div>
+</section>
+
+<section>
+    <div th:insert="subheader :: subheader"></div>
+<!--    <div class="grid medium-up&#45;&#45;grid&#45;&#45;table small&#45;&#45;text-center">-->
+<!--        <div class="grid__item medium-up&#45;&#45;one-half">-->
+<!--            <small>-->
+<!--                "Nenavizion © 2023-->
+<!--                <a href="about_us.html" class="about_us">about us</a>"-->
+<!--            </small>-->
+<!--        </div>-->
+<!--    </div>-->
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+</html>
