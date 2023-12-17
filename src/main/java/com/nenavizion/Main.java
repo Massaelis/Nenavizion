@@ -11,6 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public class Main {
 
     public static void main(String[] args) {
+        // TODO write scripts with table
         SpringApplication.run(Main.class, args);
     }
 }

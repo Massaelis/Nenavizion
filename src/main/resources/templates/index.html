@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Nenevizion</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-            rel="stylesheet"
-    />
-    <script
-            src="https://kit.fontawesome.com/b34c11d164.js"
-            crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
+    <link href="../static/css/bootstrap-reboot.min.css" th:href="@{/css/bootstrap-reboot.min.css}" rel="stylesheet"/>
+    <link href="../static/css/bootstrap-grid.min.css" th:href="@{/css/bootstrap-grid.min.css}" rel="stylesheet"/>
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
 </head>
 <body>
 <header>
@@ -64,21 +57,21 @@
 
 <section class="mobile">
     <div class="container">
-        <div class="row">
+        <div class="row" th:each="product : ${products}">
             <div class="col-md-4">
-                <a
-                        href="stainless_steel_chain_with_pearls.html"
-                        class="product_link"
-                >
+                <a href="stainless_steel_chain_with_pearls.html" th:href="@{${product.link}}" class="product_link">
+                    <img width="100px" height="100px"  th:src="${product.photo}" alt="">
                     <div class="mobile_item mobile_item_1"></div>
                     <div class="item_under">
-                        stainless steel chain with pearls <br />
-                        <div class="item_under_price">15€</div>
+                        <p th:text="|Description ${product.description}|">
+                        <div class="item_under_price">
+                            <p th:text="|Description ${product.price}|">
+                        </div>
                     </div>
                 </a>
             </div>
 
-            <div class="col-md-4">
+            <!--<div class="col-md-4">
                 <a href="#" class="product_link">
                     <div class="mobile_item mobile_item_2"></div>
                     <div class="item_under">
@@ -236,7 +229,7 @@
                         <div class="item_under_price">15€</div>
                     </div>
                 </a>
-            </div>
+            </div>-->
         </div>
     </div>
 </section>
@@ -246,11 +239,15 @@
         <div class="grid__item medium-up--one-half">
             <small>
                 "Nenavizion © 2023
-                <a href="about_us.html" class="about_us">about us</a>"
+                <a href="about.html" th:href="@{about}" class="about">about us</a>"
             </small>
         </div>
     </div>
 </section>
 </body>
+<script
+        src="https://kit.fontawesome.com/b34c11d164.js"
+        crossorigin="anonymous"
+></script>
 </html>
 
