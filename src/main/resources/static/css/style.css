@@ -73,14 +73,16 @@ nav {
 .mobile .row {
   margin-top: 32px;
 }
-.mobile_item {
+.mobile_item{
   position: relative;
   width: 320px;
   height: 280px;
   margin: 0 auto;
+   /* center center/cover no-repeat; */
 }
 
 .item {
+
   padding: 79px 0 20px 0;
   /* margin-left: 391px; */
 }
@@ -109,6 +111,8 @@ nav {
 }
 
 .item_under {
+  position: relative;
+  width: 320px;
   font-size: 15px;
   font-family: Courier New, Courier, monospace;
   font-style: normal;
@@ -118,7 +122,13 @@ nav {
   text-align: center;
   text-transform: uppercase;
 }
-
+.item_under_price {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 31px;
+  text-transform: uppercase;
+  margin-bottom: 19px;
+}
 .item_40 {
   padding-top: 35px;
   font-size: 15px;
@@ -166,13 +176,6 @@ nav {
   text-transform: uppercase;
 } */
 
-.item_under_price {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 31px;
-  text-transform: uppercase;
-  margin-bottom: 19px;
-}
 
 .product_link {
   padding-top: 20px;
@@ -208,62 +211,7 @@ nav {
   padding-top: 40px;
 }
 
-.mobile_item_1 {
-  background: url("../images/1.png") center center/cover no-repeat;
-}
-.mobile_item_2 {
-  background: url("../images/2.png") center center/cover no-repeat;
-}
-.mobile_item_3 {
-  background: url("../images/3.png") center center/cover no-repeat;
-}
-.mobile_item_4 {
-  background: url("../images/4.png") center center/cover no-repeat;
-}
-.mobile_item_5 {
-  background: url("../images/5.png") center center/cover no-repeat;
-}
-.mobile_item_6 {
-  background: url("../images/6.png") center center/cover no-repeat;
-}
-.mobile_item_7 {
-  background: url("../images/7.png") center center/cover no-repeat;
-}
-.mobile_item_8 {
-  background: url("../images/8.png") center center/cover no-repeat;
-}
-.mobile_item_9 {
-  background: url("../images/9.png") center center/cover no-repeat;
-}
-.mobile_item_10 {
-  background: url("../images/10.png") center center/cover no-repeat;
-}
-.mobile_item_11 {
-  background: url("../images/11.png") center center/cover no-repeat;
-}
-.mobile_item_12 {
-  background: url("../images/12.png") center center/cover no-repeat;
-}
-.mobile_item_13 {
-  background: url("../images/13.png") center center/cover no-repeat;
-}
-.mobile_item_14 {
-  background: url("../images/14.png") center center/cover no-repeat;
-}
-.mobile_item_15 {
-  background: url("../images/15.png") center center/cover no-repeat;
-}
-.mobile_item_16 {
-  background: url("../images/16.png") center center/cover no-repeat;
-}
 
-.mobile_item_sunglassees {
-  background: url("../images/sunglasses.png") center center/cover no-repeat;
-}
-
-.mobile_item_18 {
-  background: url("../images/18.png") center center/cover no-repeat;
-}
 
 .medium-up--grid--table {
   display: table;
@@ -349,11 +297,3 @@ input:focus {
     border: none;
     cursor: pointer;
 }
-::-webkit-input-placeholder {color:#3f3f44; padding-left: 10px;} // Это стили для placeholder
-::-moz-placeholder          {color:#3f3f44; padding-left: 10px;} // Это стили для placeholder
-:-moz-placeholder           {color:#3f3f44; padding-left: 10px;} // Это стили для placeholder
-:-ms-input-placeholder      {color:#3f3f44; padding-left: 10px;} // Это стили для placeholder
-
-
-
-

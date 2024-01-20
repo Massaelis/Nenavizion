@@ -1,0 +1,91 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Nenevizion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
+    <link href="../static/css/bootstrap-reboot.min.css" th:href="@{/css/bootstrap-reboot.min.css}" rel="stylesheet" />
+    <link href="../static/css/bootstrap-grid.min.css" th:href="@{/css/bootstrap-grid.min.css}" rel="stylesheet" />
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+
+</head>
+<body>
+<header>
+    <div th:insert="menu :: menu_fragment"></div>
+</header>
+
+<section class="item">
+    <div class="item_40">
+        <img src="../static/images/1.png" alt="1" class="mobile_item item_img"/>
+        <br/>
+        stainless steel chain with pearls
+        <br/>
+
+        <div class="item_under_price">15€</div>
+
+        color: silver
+        <br/><br/>
+        <a href="#" class="product_link_2">
+            <button>buy</button>
+        </a>
+        <br/><br/>
+        <div class="item_under_price">Description</div>
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quod
+        quidem labore placeat in fuga quis nisi, ipsa iste voluptas officiis ad?
+        Quo saepe, assumenda esse labore quod suscipit cumque ...
+    </div>
+</section>
+
+<!--<section class="mobile_i">-->
+<!--    <div class="container">-->
+<!--        <div class="message">You might also like <br/><br/></div>-->
+
+<!--        <div class="row">-->
+<!--            <div class="col-md-4">-->
+<!--                <a href="#" class="product_link">-->
+<!--                    <div class="mobile_item mobile_item_9"></div>-->
+<!--                    <div class="item_under">-->
+<!--                        cross pendant (silver) <br/>-->
+<!--                        <div class="item_under_price">15€</div>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--            </div>-->
+
+<!--            <div class="col-md-4">-->
+<!--                <a href="#" class="product_link">-->
+<!--                    <div class="mobile_item mobile_item_7"></div>-->
+<!--                    <div class="item_under">-->
+<!--                        saturn necklace (cross) <br/>-->
+<!--                        <div class="item_under_price">25€</div>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="col-md-4">-->
+<!--                <a href="#" class="product_link">-->
+<!--                    <div class="mobile_item mobile_item_13"></div>-->
+<!--                    <div class="item_under">-->
+<!--                        duble cross necklaces (silver) <br/>-->
+<!--                        <div class="item_under_price">30€</div>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<section>
+    <div th:insert="subheader :: subheader_fragment"></div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous">
+</script>
+</body>
+</html>
