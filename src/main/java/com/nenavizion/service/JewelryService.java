@@ -54,7 +54,7 @@ public class JewelryService {
         return repository.findByColor(color).orElseThrow();
     }
 
-    public Jewelry findByType(final String type) {
-        return repository.findByType(type).orElseThrow();
+    public Iterable<Jewelry> findByType(final String type) {
+        return repository.findByType(type);
     }
 }

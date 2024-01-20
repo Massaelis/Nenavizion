@@ -7,31 +7,35 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Nenevizion</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
-    <link href="../static/css/bootstrap-reboot.min.css" th:href="@{/css/bootstrap-reboot.min.css}" rel="stylesheet" />
-    <link href="../static/css/bootstrap-grid.min.css" th:href="@{/css/bootstrap-grid.min.css}" rel="stylesheet" />
-    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+    <link href="../static/css/bootstrap-reboot.min.css" th:href="@{/css/bootstrap-reboot.min.css}" rel="stylesheet"/>
+    <link href="../static/css/bootstrap-grid.min.css" th:href="@{/css/bootstrap-grid.min.css}" rel="stylesheet"/>
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
 </head>
 <body>
+
 <header>
     <div th:insert="menu :: menu_fragment"></div>
 </header>
 
 <section class="mobile">
     <div class="container">
-        <div class="row"  th:if="${product.type == 'chain'}" th:each="product : ${products}">
+        <div class="row" th:each="product : ${products}">
             <div class="col-md-4">
-                <a href="product.html" th:href="@{${product.link}}" class="product_link">
-                    <img width="100px" height="100px"  th:src="${product.photo}" alt="">
+<!--                <a href="product.html" th:href="@{${product.link}}" class="product_link">-->
+<!--                    <img width="100px" height="100px" th:src="${product.photo}" alt="">-->
                     <div class="item_under">
-                        <p th:text="|Description ${product.description}|">
+                        <p th:text="|Name ${product.name}|">
                         <div class="item_under_price">
                             <p th:text="|price ${product.price}|">
                         </div>
+                        <a th:href="@{/jewelry/id/{id}(id=${product.id})}">
+                            <button type="button" class="btn btn-info">Посмотреть</button>
+                        </a>
                     </div>
-                </a>
+<!--                </a>-->
             </div>
         </div>
     </div>
@@ -40,9 +44,11 @@
 <section>
     <div th:insert="subheader :: subheader_fragment"></div>
 </section>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous">
 </script>
+
 </body>
 </html>

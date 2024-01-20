@@ -4,9 +4,11 @@ import com.nenavizion.model.Jewelry;
 import com.nenavizion.service.JewelryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
-@RestController
+@Controller
 @RequestMapping("/jewelry")
 public class JewelryController {
     private final JewelryService service;
@@ -16,59 +18,25 @@ public class JewelryController {
         this.service = service;
     }
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public String create(@RequestBody Jewelry jewelry) {
-        if (jewelry.getName() == null) {
-            jewelry.setName("Default name");
-        } else if (jewelry.getType() == null) {
-            jewelry.setType("Default type");
-        } else if (jewelry.getColor() == null) {
-            jewelry.setColor("Default color");
-        }
-        return service.save(jewelry);
-    }
-
-    @PutMapping
-    public String updateGreeter(@RequestBody Jewelry jewelry) {
-        if (jewelry.getId() == null) {
-            throw new IllegalArgumentException();
-        }
-        return service.update(jewelry);
-    }
-
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable String id) {
-        service.delete(id);
-    }
-
-    @GetMapping
-    public Iterable<Jewelry> findAll() {
-        return service.findAll();
-    }
 
     @GetMapping("/id/{id}")
-    public Jewelry findById(@PathVariable String id) {
-        return service.findById(id);
+    public ModelAndView findById(final ModelAndView modelAndView, final @PathVariable String id) {
+        modelAndView.addObject("product", service.findById(id));
+        modelAndView.setViewName("product");
+        return modelAndView;
     }
 
-    @GetMapping("/{name}")
-    public Jewelry findByName(@PathVariable String name) {
-        return service.findByName(name);
-    }
 
-    @GetMapping("/{price}")
-    public Jewelry findByPrice(@PathVariable int price) {
-        return service.findByPrice(price);
-    }
-
-    @GetMapping("/{type}")
-    public Jewelry findByType(@PathVariable String type) {
-        return service.findByType(type);
-    }
-
-    @GetMapping("/{color}")
-    public Jewelry findByColor(@PathVariable String color) {
-        return service.findByColor(color);
+    @GetMapping("/type/{type}")
+    public ModelAndView findByType(final ModelAndView modelAndView, final @PathVariable String type) {
+        final Iterable<Jewelry> jewelries;
+        if ("all".equals(type)) {
+            jewelries = service.findAll();
+        } else {
+            jewelries = service.findByType(type);
+        }
+        modelAndView.addObject("products", jewelries);
+        modelAndView.setViewName("products");
+        return modelAndView;
     }
 }

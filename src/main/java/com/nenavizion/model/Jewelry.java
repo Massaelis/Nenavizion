@@ -20,11 +20,11 @@ public class Jewelry {
 
     private String name;
 
-    private String description;
+//    private String description;
 
-    private String link;
+//    private String link;
 
-    private String photo;
+//    private String photo;
 
     private String type;
 

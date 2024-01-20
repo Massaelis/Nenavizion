@@ -10,7 +10,7 @@ import lombok.Setter;
 import java.util.Date;
 import java.util.Set;
 
-@Entity
+//@Entity
 @Getter
 @Setter
 public class Ordering {

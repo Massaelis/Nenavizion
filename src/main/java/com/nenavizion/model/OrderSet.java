@@ -9,7 +9,7 @@ import lombok.ToString;
 
 import java.math.BigDecimal;
 
-@Entity
+//@Entity
 @Getter
 @Setter
 @ToString

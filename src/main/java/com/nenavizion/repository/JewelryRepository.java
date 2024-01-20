@@ -14,5 +14,5 @@ public interface JewelryRepository extends JpaRepository<Jewelry, String> {
 
     Optional<Jewelry> findByColor(String color);
 
-    Optional<Jewelry> findByType(String type);
+    Iterable<Jewelry> findByType(String type);
 }
