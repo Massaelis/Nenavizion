@@ -24,11 +24,11 @@ public class Jewelry {
 
 //    private String link;
 
-//    private String photo;
-
     private String type;
 
     private String color;
 
     private int price;
+
+    private String photo;
 }
