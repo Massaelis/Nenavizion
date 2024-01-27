@@ -20,8 +20,6 @@ public class Jewelry {
 
     private String name;
 
-//    private String link;
-
     private String type;
 
     private String color;

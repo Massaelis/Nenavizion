@@ -12,18 +12,19 @@
 
 <section class="mobile">
     <div class="container">
-        <div class="row" th:each="product : ${products}">
-            <div class="col-md-4">
-                <img class="mobile_item" th:src="${product.photo}" alt="">
-                <div class="item_under">
-                    <p th:text="|${product.name}|">
-                    <div class="item_under_price">
-                        <p th:text="|${product.price}€|">
-                    </div>
-                    <a th:href="@{/jewelry/id/{id}(id=${product.id})}">
+        <div class="row">
+            <div class="col-md-4" th:each="product : ${products}">
+                <a th:href="@{/jewelry/id/{id}(id=${product.id})}">
+                    <img class="mobile_item" th:src="${product.photo}" alt="">
+                    <div class="item_under">
+                        <p th:text="|${product.name}|">
+                        <div class="item_under_price">
+                            <p th:text="|${product.price}€|">
+                        </div>
+
                         <button type="button" class="btn btn-info">Посмотреть</button>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

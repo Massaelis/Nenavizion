@@ -12,14 +12,12 @@ public class Main {
 
     public static void main(String[] args) {
         /**
-         * - Довести до корректной компиляции проект
-         * -- Написать скрипты на создание всех необходимых таблиц
-         * -- Разбить один общий скрипт на N конкретных по типу
          * - Реализовать страницу продуктов (всех, по типу)
          * - Реализовать страницу просмотра конкретного продукта
          * - Почистить от "лишнего" html страницы
-         * https://www.base64-image.de/
-         * https://imgur.com/
+         * - Разобраться с пагинацией https://www.baeldung.com/spring-thymeleaf-pagination
+         * - Разобраться с сортировкой https://www.bezkoder.com/thymeleaf-pagination-and-sorting-example/
+         * - Разобраться с фильтрацией
          */
         SpringApplication.run(Main.class, args);
     }
