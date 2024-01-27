@@ -4,105 +4,44 @@
 <head>
     <div th:insert="~{head :: head_fragment}"></div>
 </head>
+
 <body>
 <header>
     <div th:insert="~{menu :: menu_fragment}"></div>
 </header>
 
-
-<!--<section class="mobile">-->
-<!--    <div class="container">-->
-<!--        <div class="row" th:each="product : ${products}">-->
-<!--            <div class="col-md-4">-->
-<!--                &lt;!&ndash;                <a href="product.html" th:href="@{${product.link}}" class="product_link">&ndash;&gt;-->
-<!--                &lt;!&ndash;                    <img width="100px" height="100px" th:src="${product.photo}" alt="">&ndash;&gt;-->
-<!--                <img class="mobile_item" th:src="${product.photo}" alt="">-->
-<!--                <div class="item_under">-->
-<!--                    <p th:text="|${product.name}|">-->
-<!--                    <div class="item_under_price">-->
-<!--                        <p th:text="|${product.price}€|">-->
-<!--                    </div>-->
-<!--                    <a th:href="@{/jewelry/id/{id}(id=${product.id})}">-->
-<!--                        <button type="button" class="btn btn-info">Посмотреть</button>-->
-<!--                    </a>-->
-<!--                </div>-->
-<!--                &lt;!&ndash;                </a>&ndash;&gt;-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-
-
-<section class="item">
+<section class="item mobile">
     <div class="item_40">
         <img class="mobile_item item_img" th:src="${product.photo}" alt="">
-        <!--        <img src="../static/images/1.png" alt="1" class="mobile_item item_img"/>-->
+        <br/>
+        name:
         <br/>
         <p th:text="|${product.name}|">
             <br/>
 
+            <br/>
         <div class="item_under_price">
+            price:
             <p th:text="|${product.price}€|">
         </div>
 
         color:
         <p th:text="|${product.color}|">
             <br/><br/>
-            <a href="#" class="product_link_2">
-                <button>buy</button>
-            </a>
-            <br/><br/>
-        <div class="item_under_price">Description</div>
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quod
-        quidem labore placeat in fuga quis nisi, ipsa iste voluptas officiis ad?
-        Quo saepe, assumenda esse labore quod suscipit cumque ...
+            <br/><br/>
+        <div class="item_under_price"><a href="#" class="product_link_2">
+            <button>buy</button>
+        </a>
+        </div>
+        Description:
+        <p th:text="|${product.description}|">
     </div>
 </section>
-
-<!--<section class="mobile_i">-->
-<!--    <div class="container">-->
-<!--        <div class="message">You might also like <br/><br/></div>-->
-
-<!--        <div class="row">-->
-<!--            <div class="col-md-4">-->
-<!--                <a href="#" class="product_link">-->
-<!--                    <div class="mobile_item mobile_item_9"></div>-->
-<!--                    <div class="item_under">-->
-<!--                        cross pendant (silver) <br/>-->
-<!--                        <div class="item_under_price">15€</div>-->
-<!--                    </div>-->
-<!--                </a>-->
-<!--            </div>-->
-
-<!--            <div class="col-md-4">-->
-<!--                <a href="#" class="product_link">-->
-<!--                    <div class="mobile_item mobile_item_7"></div>-->
-<!--                    <div class="item_under">-->
-<!--                        saturn necklace (cross) <br/>-->
-<!--                        <div class="item_under_price">25€</div>-->
-<!--                    </div>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="col-md-4">-->
-<!--                <a href="#" class="product_link">-->
-<!--                    <div class="mobile_item mobile_item_13"></div>-->
-<!--                    <div class="item_under">-->
-<!--                        duble cross necklaces (silver) <br/>-->
-<!--                        <div class="item_under_price">30€</div>-->
-<!--                    </div>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
 
 <section>
     <div th:insert="~{subheader :: subheader_fragment}"></div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous">
-</script>
+
 </body>
 </html>

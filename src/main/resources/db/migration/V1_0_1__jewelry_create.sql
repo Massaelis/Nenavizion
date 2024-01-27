@@ -6,7 +6,8 @@ create table jewelry
         primary key,
     name  varchar(255),
     type  varchar(255),
-    photo  varchar(255)
+    photo  varchar(255),
+    description  varchar(255)
 );
 
 alter table jewelry

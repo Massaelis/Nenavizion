@@ -20,8 +20,6 @@ public class Jewelry {
 
     private String name;
 
-//    private String description;
-
 //    private String link;
 
     private String type;
@@ -31,4 +29,6 @@ public class Jewelry {
     private int price;
 
     private String photo;
+
+    private String description;
 }
