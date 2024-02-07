@@ -1,0 +1,16 @@
+/* Subheader */
+.about_us {
+  font-size: 15px;
+  font-weight: 300;
+  text-decoration: none;
+  text-decoration: underline;
+  color: black;
+}
+
+.medium-up--grid--table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin-left: 0;
+  text-align: center;
+}

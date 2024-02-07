@@ -10,9 +10,9 @@
     <div th:insert="~{menu :: menu_fragment}"></div>
 </header>
 
-<section class="item mobile">
-    <div class="item_40">
-        <img class="mobile_item item_img" th:src="${product.photo}" alt="">
+<section class="mobile">
+    <div class="item_description">
+        <img class="item_img" th:src="${product.photo}" alt="">
         <br/>
         name:
         <br/>
@@ -30,7 +30,7 @@
             <br/><br/>
 
             <br/><br/>
-        <div class="item_under_price"><a href="#" class="product_link_2">
+        <div class="item_under_price"><a href="#" class="product_button">
             <button>buy</button>
         </a>
         </div>
