@@ -1,0 +1,20 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <link th:insert="~{head :: head_fragment}">
+</head>
+<body>
+
+<form th:action="@{/search}" method="POST" th:object="${searchFilters}">
+    <label for="name">Product name:</label>
+    <input type="text" id="name" name="name" th:field="*{name}">
+
+    <label for="price">Product price:</label>
+    <input type="text" id="price" name="price" th:field="*{price}">
+
+    <input type="submit" value="Отправить">
+</form>
+
+</body>
+</html>

@@ -2,7 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.thymeleaf.org ">
 <head>
-    <div th:insert="~{head :: head_fragment}"></div>
+    <link th:insert="~{head :: head_fragment}">
+    <link href="../static/css/product.css" th:href="@{/css/product.css}" rel="stylesheet"/>
 </head>
 
 <body>

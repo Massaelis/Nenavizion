@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.thymeleaf.org ">
 <head>
-    <div th:insert="~{head :: head_fragment}"></div>
+    <link th:insert="~{head :: head_fragment}">
 </head>
 <body>
 
@@ -30,6 +30,7 @@
 
 <li class="menu_item">
     <a th:href="@{/jewelry/jewelryPage}" class="menu_link">Pagination</a>
+    <a th:href="@{/search}" class="menu_link">Search</a>
 </li>
 
 <section>

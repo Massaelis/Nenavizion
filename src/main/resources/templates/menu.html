@@ -1,8 +1,8 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
 <html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.thymeleaf.org ">
-<head>
-    <div th:insert="~{head :: head_fragment}"></div>
+<head th:fragment="head_fragment">
+    <link href="../static/css/menu.css" th:href="@{/css/menu.css}" rel="stylesheet"/>
 </head>
 
 <body>
@@ -20,6 +20,9 @@
         <nav>
             <div class="container">
                 <ul class="menu">
+                    <li class="menu_item">
+                        <a th:href="@{/}" class="menu_link">Home page</a>
+                    </li>
                     <li class="menu_item">
                         <a th:href="@{/jewelry/type/all}" class="menu_link">All product</a>
                     </li>
