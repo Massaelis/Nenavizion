@@ -3,8 +3,13 @@ package com.nenavizion.service;
 import com.nenavizion.model.Jewelry;
 import com.nenavizion.repository.JewelryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -57,4 +62,31 @@ public class JewelryService {
     public Iterable<Jewelry> findByType(final String type) {
         return repository.findByType(type);
     }
+// ----------------------------------------------------------------
+
+//    public Page<Jewelry> findPaginated(Pageable pageable) {
+//        int pageSize = pageable.getPageSize();
+//        int currentPage = pageable.getPageNumber();
+//        int startItem = currentPage * pageSize;
+//        List<Jewelry> list;
+//
+//        if (repository.findAll().size() < startItem) {
+//            list = Collections.emptyList();
+//        } else {
+//            int toIndex = Math.min(startItem + pageSize, repository.findAll().size());
+//            list = repository.findAll().subList(startItem, toIndex);
+//        }
+//
+//        Page<Jewelry> jewelryPage = new PageImpl<Jewelry>(list, PageRequest.of(currentPage, pageSize), repository.findAll().size());
+//
+//        return jewelryPage;
+//
+//    }
+
+// ----------------------------------------------------------------
+    public Page<Jewelry> findAllPageable(Pageable pageable) {
+        return repository.findAll(pageable);
+    }
+
+// ----------------------------------------------------------------
 }
