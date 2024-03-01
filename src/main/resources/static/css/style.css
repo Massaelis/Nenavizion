@@ -2,3 +2,18 @@
   min-height: 864px;
   padding: 79px 0 20px 0;
 }
+
+.aside {
+    padding: 1rem;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    height: 100%;
+    z-index: 3;
+    padding-top: 44px;
+    right: 0px;
+}
+
+.search {
+  image: search.svg;
+}

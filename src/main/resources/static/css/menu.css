@@ -35,11 +35,12 @@ nav {
 /* Inscription */
 
 .subheader {
-  position: absolute;
+  position: fixed;
   display: block;
   width: 100%;
   background-color: #e4e4e4;
   margin-top: 20px;
+  z-index: 3;
  }
 
 .announcement-bar {
