@@ -1,0 +1,23 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <div th:insert="~{head :: head_fragment}"></div>
+</head>
+
+<body>
+<div th:fragment="subheader_fragment">
+    <header>
+        <div class="grid medium-up--grid--table small--text-center">
+            <div class="grid__item medium-up--one-half">
+                <small>
+                    "Nenavizion © 2024
+                    <a href="about.html" th:href="@{/about}" class="about_us">about us</a>"
+                </small>
+            </div>
+        </div>
+    </header>
+</div>
+</body>
+
+</html>

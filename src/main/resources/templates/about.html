@@ -1,0 +1,58 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <div th:insert="~{head :: head_fragment}"></div>
+</head>
+
+<body class="about">
+<header>
+    <div th:insert="~{menu :: menu_fragment}"></div>
+</header>
+
+<section class="item">
+    <div class="col-md-10">
+        <div class="text_about_us">
+            about us: <br/><br/>
+            Nenavizion, is a fashion brand, founded in 2021 in Athens, Greece,
+            started by two visionary 20-year-old friends. Originating from the
+            sale of dead stock eyewear from the 2000s. Later on the brand swiftly
+            expanded into adding jewelry (mainly crosses ), as well as shoes and
+            clothing pieces. <br/><br/>The name "nenavizion" is a fusion of a
+            Russian term, "ненавижу" (nenavizhu), translating to "hate," and
+            "Vizion" (with a distinctive "z"), encapsulating a profound meaning.
+            <br/><br/>This brand is more than a label; it embodies a mindset
+            determined to revolutionize Greek fashion and, subsequently, make a
+            global impact. Nenavizion thrives on collaboration, embracing the
+            synergy of like-minded young artists who share our vision. So, if you
+            would like to be part of the team feel free to contact us ;<br/><br/>
+            Embarking on this venture with a budget of 30 euros and no prior
+            industry knowledge. We relied on pure vision and an unwavering love
+            for the youth and fashion community.<br/><br/>
+            To those who harbor a vision. Trust your instincts. Nurture your
+            curiosity. And let inspiration guide you. Unleash your creativity and
+            express love unabashedly.
+        </div>
+        <div class="item_about_us">
+            <br/><br/>
+            Contact information : <br/><br/>
+
+            email :
+            <a href="mailto:nenavizion@gmail.com" class="about_us_link">nenavizion@gmail.com</a>
+            <br/><br/>
+            Social Media : <br/><br/>
+            Instagram:
+            <a href="https://instagram.com/nenavizion?igshid=OGQ5ZDc2ODk2ZA==" class="about_us_link">@nenavizion</a>
+            <br/><br/>
+            Tiktok:
+            <a href="https://www.tiktok.com/@nenavizion?_t=8hNdJBF3rN3&_r=1" class="about_us_link">@nenavizion</a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div th:insert="~{subheader :: subheader_fragment}"></div>
+</section>
+
+</body>
+</html>

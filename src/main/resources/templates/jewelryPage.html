@@ -1,0 +1,116 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <div th:insert="~{head :: head_fragment}"></div>
+</head>
+<body>
+
+<header>
+    <div th:insert="~{menu :: menu_fragment}"></div>
+</header>
+
+<section>
+    <table border="1">
+
+        <div>
+            <tr th:each="jewelry, iStat : ${jewelryPage.content}"
+                th:style="${iStat.odd}? 'font-weight: bold;'"
+                th:alt-title="${iStat.even}? 'even' : 'odd'">
+                <td th:text="${jewelry.id}"/>
+                <td th:text="${jewelry.name}"/>
+            </tr>
+        </div>
+    </table>
+    <div th:if="${jewelryPage.totalPages > 0}" class="pagination"
+         th:each="pageNumber : ${pageNumbers}">
+        <a th:href="@{/jewelryPage(size=${jewelryPage.size}, page=${pageNumber})}"
+           th:text=${pageNumber}
+           th:class="${pageNumber==jewelryPage.number + 1} ? active"></a>
+    </div>
+
+
+    <div class="container">
+
+        <div th:switch="${product}" class="container my-5">
+
+
+            <select class="form-control pagination" id="pageSizeSelect">
+                <option th:each="pageSize : ${pageSizes}" th:text="${pageSize}"
+                        th:value="${pageSize}"
+                        th:selected="${pageSize} == ${selectedPageSize}"></option>
+            </select> <br></br>
+            <div th:if="${product.totalPages != 1}">
+                <ul class="pagination">
+                    <li th:class="${product.number == 0} ? disabled"><a
+                            class="page-link"
+                            th:href="@{/(pageSize=${selectedPageSize}, page=1)}">&laquo;</a></li>
+                    <li th:class="${product.number == 0} ? disabled"><a
+                            class="page-link"
+                            th:href="@{/(pageSize=${selectedPageSize}, page=${product.number})}">&larr;</a>
+                    </li>
+                    <li
+                            th:class="${product.number == (page - 1)} ? 'active pointer-disabled'"
+                            th:each="page : ${#numbers.sequence(pager.startPage, pager.endPage)}">
+                        <a class="page-link"
+                           th:href="@{/(pageSize=${selectedPageSize}, page=${page})}"
+                           th:text="${page}"></a>
+                    </li>
+                    <li th:class="${product.number + 1 == product.totalPages} ? disabled">
+                        <a class="page-link"
+                           th:href="@{/(pageSize=${selectedPageSize}, page=${product.number + 2})}">&rarr;</a>
+                    </li>
+                    <li th:class="${product.number + 1 == product.totalPages} ? disabled">
+                        <a class="page-link"
+                           th:href="@{/(pageSize=${selectedPageSize}, page=${product.totalPages})}">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+            <div th:case="*">
+                <div class="table-responsive-xl">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="product : ${products}">
+                            <td th:text="${products.name}"></td>
+                            <td th:text="${products.price}"></td>
+
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script th:src="@{/webjars/jquery/3.4.0/jquery.min.js} "></script>
+    <script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js} "></script>
+
+    <script>
+   $(document).ready(() => {
+       changePageAndSize();
+   });
+
+   changePageAndSize = () => {
+       $('#pageSizeSelect').change(evt => {
+           window.location.replace(`/?pageSize=${evt.target.value}&page=1`);
+       });
+   }
+
+    </script>
+</section>
+
+<section>
+    <div th:insert="~{subheader :: subheader_fragment}"></div>
+</section>
+</div>
+
+</body>
+</html>

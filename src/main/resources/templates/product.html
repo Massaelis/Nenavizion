@@ -1,0 +1,48 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <link th:insert="~{head :: head_fragment}">
+    <link href="../static/css/product.css" th:href="@{/css/product.css}" rel="stylesheet"/>
+</head>
+
+<body>
+<header>
+    <div th:insert="~{menu :: menu_fragment}"></div>
+</header>
+
+<section class="mobile">
+    <div class="item_description">
+        <img class="item_img" th:src="${product.photo}" alt="">
+        <br/>
+        name:
+        <br/>
+        <p th:text="|${product.name}|">
+            <br/>
+
+            <br/>
+        <div class="item_under_price">
+            price:
+            <p th:text="|${product.price}€|">
+        </div>
+
+        color:
+        <p th:text="|${product.color}|">
+            <br/><br/>
+
+            <br/><br/>
+        <div class="item_under_price"><a href="#" class="product_button">
+            <button>buy</button>
+        </a>
+        </div>
+        Description:
+        <p th:text="|${product.description}|">
+    </div>
+</section>
+
+<section>
+    <div th:insert="~{subheader :: subheader_fragment}"></div>
+</section>
+
+</body>
+</html>

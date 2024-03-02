@@ -1,0 +1,29 @@
+/* Products */
+
+.mobile .row {
+  margin-top: 32px;
+}
+
+.mobile_item{
+  position: relative;
+  width: 320px;
+  height: 320px;
+}
+
+.item_under {
+  position: relative;
+  width: 320px;
+  font-size: 15px;
+  font-family: Courier New, Courier, monospace;
+  color: #000;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.item_under_price {
+  line-height: 31px;
+  margin-bottom: 19px;
+  text-decoration: none;
+}
