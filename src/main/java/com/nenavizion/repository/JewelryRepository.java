@@ -12,9 +12,9 @@ import java.util.Optional;
 public interface JewelryRepository extends JpaRepository<Jewelry, String> {
     Iterable<Jewelry> findByNameContainingIgnoreCase(String name);
 
-    Optional<Jewelry> findByPrice(int price);
+    Iterable<Jewelry> findByPriceBetween(int min, int max);
 
-    Optional<Jewelry> findByColor(String color);
+    Iterable<Jewelry> findByColorIgnoreCase(String color);
 
     Iterable<Jewelry> findByType(String type);
 

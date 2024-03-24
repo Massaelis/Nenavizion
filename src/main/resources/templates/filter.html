@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильтры интернет-магазина</title>
+</head>
+<body>
+<form action="/filters" method="GET">
+    <label for="price1">От цены:</label>
+    <input type="number" id="price1" name="priceMin" min="0" step="10"> руб. <br>
+
+    <label for="price2">До цены:</label>
+    <input type="number" id="price2" name="priceMax" min="0" step="10"> руб. <br>
+
+    <label for="color-filter">Цвет:</label>
+    <select id="color-filter" name="color">
+        <option value="SILVER">SILVER</option>
+        <option value="GOLD">GOLD</option>
+        <option value="green">Зеленый</option>
+        <option value="yellow">Желтый</option>
+    </select> <br>
+
+    <button type="submit">Применить фильтры</button>
+</form>
+</body>
+</html>

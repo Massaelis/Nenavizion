@@ -48,12 +48,12 @@ public class JewelryService {
         return repository.findByNameContainingIgnoreCase(name);
     }
 
-    public Jewelry findByPrice(final int price) {
-        return repository.findByPrice(price).orElseThrow();
+    public Iterable<Jewelry> findByPrice(final int min, final int max) {
+        return repository.findByPriceBetween(min, max);
     }
 
-    public Jewelry findByColor(final String color) {
-        return repository.findByColor(color).orElseThrow();
+    public Iterable<Jewelry> findByColor(final String color) {
+        return repository.findByColorIgnoreCase(color);
     }
 
     public Iterable<Jewelry> findByType(final String type) {

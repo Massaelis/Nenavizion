@@ -12,12 +12,16 @@ public class Main {
 
     public static void main(String[] args) {
         /**
-         * - Реализовать страницу продуктов (всех, по типу)
-         * - Реализовать страницу просмотра конкретного продукта
-         * - Почистить от "лишнего" html страницы
-         * - Разобраться с пагинацией https://www.baeldung.com/spring-thymeleaf-pagination
-         * - Разобраться с сортировкой https://www.bezkoder.com/thymeleaf-pagination-and-sorting-example/
          * - Разобраться с фильтрацией
+         * -- Добавить фильтры*
+         * -- Реализовать фильтр на основе данных с бекенда
+         * -- Реализовать фильтр по нескольким критериям
+         * -- Реализовать очистку фильтров
+         * -- Реализовать фильтр в зависимости от типа товара на странице которого мы находимся
+         *
+         * TODO
+         * - Разобраться с сортировкой https://www.bezkoder.com/thymeleaf-pagination-and-sorting-example/
+         * - Разобраться с пагинацией https://www.baeldung.com/spring-thymeleaf-pagination
          */
         SpringApplication.run(Main.class, args);
     }

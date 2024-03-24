@@ -23,19 +23,38 @@ public class TestController {
         this.jewelryService = jewelryService;
     }
 
-    @GetMapping("/search")
+   /* @GetMapping("/search")
     public ModelAndView getForm(final ModelAndView modelAndView) {
         modelAndView.setViewName("search");
         modelAndView.addObject("searchFilters", new SearchFilters());
         return modelAndView;
-    }
+    }*/
 
     @PostMapping("/search")
     public String postForm(final RedirectAttributes modelAndView, final @ModelAttribute SearchFilters searchFilters) {
         System.out.println(searchFilters);
         final Iterable<Jewelry> result = jewelryService.findByNameContainingIgnoreCase(searchFilters.getName());
         modelAndView.addAttribute("products", result);
-        return "redirect:/jewelry/type/all";
+        return "redirect:/jewelry/type/custom";
+    }
+
+    @GetMapping("/filter")
+    public ModelAndView filter(final ModelAndView modelAndView) {
+        modelAndView.setViewName("filter");
+        return modelAndView;
+    }
+
+    @GetMapping("/filters")
+    public String filters(final RedirectAttributes modelAndView, final @ModelAttribute FilterFilters searchFilters) {
+        System.out.println(searchFilters);
+        if (searchFilters.getPriceMin() != null || searchFilters.getPriceMax() != null) {
+            modelAndView.addAttribute("products", jewelryService.findByPrice(
+                    searchFilters.getPriceMin(), searchFilters.getPriceMax())
+            );
+        } else if (searchFilters.getColor() != null) {
+            modelAndView.addAttribute("products", jewelryService.findByColor(searchFilters.getColor()));
+        }
+        return "redirect:/jewelry/type/custom";
     }
 }
 
@@ -44,5 +63,16 @@ public class TestController {
 @ToString
 class SearchFilters {
     private String name;
-    private String price;
 }
+
+@Getter
+@Setter
+@ToString
+class FilterFilters {
+    private String color;
+
+    private Integer priceMin;
+
+    private Integer priceMax;
+}
+
