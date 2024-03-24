@@ -10,7 +10,6 @@
     <div th:insert="~{menu :: menu_fragment}"></div>
 </header>
 
-<section>
     <table border="1">
 
         <div>
@@ -35,34 +34,34 @@
         <div th:switch="${product}" class="container my-5">
 
 
-            <select class="form-control pagination" id="pageSizeSelect">
-                <option th:each="pageSize : ${pageSizes}" th:text="${pageSize}"
-                        th:value="${pageSize}"
-                        th:selected="${pageSize} == ${selectedPageSize}"></option>
+            <select class="form-control pagination" id="sizeSelect">
+                <option th:each="size : ${size}" th:text="${size}"
+                        th:value="${size}"
+                        th:selected="${size} == ${selectedSize}"></option>
             </select> <br></br>
             <div th:if="${product.totalPages != 1}">
                 <ul class="pagination">
                     <li th:class="${product.number == 0} ? disabled"><a
                             class="page-link"
-                            th:href="@{/(pageSize=${selectedPageSize}, page=1)}">&laquo;</a></li>
+                            th:href="@{/(size=${selectedSize}, page=1)}">&laquo;</a></li>
                     <li th:class="${product.number == 0} ? disabled"><a
                             class="page-link"
-                            th:href="@{/(pageSize=${selectedPageSize}, page=${product.number})}">&larr;</a>
+                            th:href="@{/(size=${selectedSize}, page=${product.number})}">&larr;</a>
                     </li>
                     <li
                             th:class="${product.number == (page - 1)} ? 'active pointer-disabled'"
                             th:each="page : ${#numbers.sequence(pager.startPage, pager.endPage)}">
                         <a class="page-link"
-                           th:href="@{/(pageSize=${selectedPageSize}, page=${page})}"
+                           th:href="@{/(pageSize=${selectedSize}, page=${page})}"
                            th:text="${page}"></a>
                     </li>
                     <li th:class="${product.number + 1 == product.totalPages} ? disabled">
                         <a class="page-link"
-                           th:href="@{/(pageSize=${selectedPageSize}, page=${product.number + 2})}">&rarr;</a>
+                           th:href="@{/(size=${selectedSize}, page=${product.number + 2})}">&rarr;</a>
                     </li>
                     <li th:class="${product.number + 1 == product.totalPages} ? disabled">
                         <a class="page-link"
-                           th:href="@{/(pageSize=${selectedPageSize}, page=${product.totalPages})}">&raquo;</a>
+                           th:href="@{/(size=${selectedSize}, page=${product.totalPages})}">&raquo;</a>
                     </li>
                 </ul>
             </div>
@@ -90,27 +89,24 @@
             </div>
         </div>
     </div>
-    <script th:src="@{/webjars/jquery/3.4.0/jquery.min.js} "></script>
-    <script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js} "></script>
+<script th:src="@{/webjars/jquery/3.4.0/jquery.min.js} "></script>
+<script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js} "></script>
 
-    <script>
-   $(document).ready(() => {
-       changePageAndSize();
-   });
+<script>
+	$(document).ready(() => {
+	    changePageAndSize();
+	});
 
-   changePageAndSize = () => {
-       $('#pageSizeSelect').change(evt => {
-           window.location.replace(`/?pageSize=${evt.target.value}&page=1`);
-       });
-   }
-
-    </script>
-</section>
+	changePageAndSize = () => {
+	    $('#pageSizeSelect').change(evt => {
+	        window.location.replace(`/?pageSize=${evt.target.value}&page=1`);
+	    });
+	}
+	</script>
 
 <section>
     <div th:insert="~{subheader :: subheader_fragment}"></div>
 </section>
-</div>
 
 </body>
 </html>

@@ -1,5 +1,6 @@
 package com.nenavizion.controller;
 
+import com.nenavizion.Pager;
 import com.nenavizion.model.Jewelry;
 import com.nenavizion.service.JewelryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ import java.util.Optional;
 @Controller
 @RequestMapping("/jewelry")
 public class JewelryController {
-
+    private static final int BUTTONS_TO_SHOW = 3;
     private static final int INITIAL_PAGE = 1;
 
     private static final int INITIAL_PAGE_SIZE = 3;
@@ -80,7 +81,19 @@ public class JewelryController {
                 )
         );
 
+//        int evalPageSize = size.orElse(INITIAL_PAGE_SIZE);
+//
+//        int evalPage = page.filter(p -> p >= 1).map(p -> p - 1)
+//                .orElse(INITIAL_PAGE);
+
+//        var users = service.findPaginated
+//                (PageRequest.of(evalPage, evalPageSize));
+        var pager = new Pager(jewelryPage.getTotalPages(),
+                jewelryPage.getNumber(), BUTTONS_TO_SHOW);
+
         modelAndView.addObject("products", jewelryPage);
+        modelAndView.addObject("pageSizes", PAGE_SIZES);
+        modelAndView.addObject("pager", pager);
         modelAndView.setViewName("products");
 
        /* int totalPages = jewelryPage.getTotalPages();

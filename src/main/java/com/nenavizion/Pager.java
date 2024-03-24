@@ -7,13 +7,15 @@ import lombok.Setter;
 @Setter
 public class Pager {
 
-    private static final int BUTTONS_TO_SHOW = 3;
-
+    private  int BUTTONS_TO_SHOW = 3;
+//    static final
     private int startPage;
 
     private int endPage;
 
-    public Pager(int totalPages, int currentPage) {
+    public Pager(int totalPages, int currentPage, int buttonsToShow) {
+
+        setBUTTONS_TO_SHOW(buttonsToShow);
 
         int halfPagesToShow = BUTTONS_TO_SHOW / 2;
 
